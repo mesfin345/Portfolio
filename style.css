@@ -1,0 +1,89 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  position: relative;
+}
+
+.header > .header-logo {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #6070ff;
+  padding: 14px 0;
+}
+
+.header-menu-btn > * + * {
+  margin-top: 3px;
+}
+
+.header-menu-btn > .menu-btn__ham {
+  width: 16px;
+  height: 2px;
+  border-radius: 2px;
+  background: #6070ff;
+}
+main {
+  background-color: #e5e5e5;
+}
+
+.main {
+  background-image: url("/images/header-shapes\ mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 114px 0;
+  background-color: #fff;
+}
+
+main > .main {
+  border-radius: 0 0 0 100px;
+  width: 100%;
+}
+
+.main > .headline-section__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.headline-section__box > * + * {
+  margin-top: 12px;
+}
+
+.headline-section__box > .headline-section__title,
+.headline-sec > .headline-section__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 650px;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
+  font-style: normal;
+}
+
+.headline-section__box > .headline-section__cont {
+  font-family: "Poppins", sans-serif;
+  font-weight: 350px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.headline-section__sub-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #7f8cff;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.headline-section__social {
+  list-style: none;
+  display: flex;
+}
+
+.headline-section__social > * + * {
+  margin-left: 19px;
+}
