@@ -399,9 +399,11 @@ textarea {
   .desktop-navigation > ul > li + li {
     margin-left: 32px;
   }
+
   .main {
     background-image: url("./images/Header-bg-desktop.png");
   }
+
   .main > .headline-section__box {
     max-width: 920px;
     margin: 0 auto;
