@@ -256,6 +256,53 @@
           </ul>
         </div>
       </section>
+      <!-- contact-section -->
+      <section class="contact-form">
+        <div class="contact-form-section">
+          <div class="contact-form-card">
+            <h2 class="contact-form-title">Contact me</h2>
+            <p class="contact-form-description">
+              If you have an application you are interested in developing, a
+              feature that you need built or a project that needs coding. I’d
+              love to help with it
+            </p>
+          </div>
+          <form
+            id="form"
+            action="https://formspree.io/f/mjvlgvab"
+            method="post"
+          >
+            <label for="username"
+              ><input
+                type="text"
+                required
+                placeholder="Full Name"
+                maxlength="30"
+                id="username"
+            /></label>
+            <label for="Email"
+              ><input
+                type="Email"
+                id="Email"
+                name="Email"
+                required
+                maxlength="30"
+                placeholder="Your Email"
+            /></label>
+            <textarea
+              id="message"
+              cols="30"
+              rows="10"
+              maxlength="500"
+              placeholder="Write your message here"
+              required
+            ></textarea>
+            <div class="submit-button">
+              <button type="submit">Get in touch</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
   </body>
 </html>
