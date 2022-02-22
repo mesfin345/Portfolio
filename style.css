@@ -236,14 +236,8 @@ button:disabled {
   margin-right: 10px;
 }
 
-
 .h3-title {
   font-family: "Crete Round", sans-serif;
-
-button {
-  transition: all 0.5s ease-out;
-  font-family: "Poppins", sans-serif;
-
   font-style: normal;
   font-weight: normal;
   font-size: 72px;
@@ -894,39 +888,5 @@ textarea:focus {
 
   hr {
     margin-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header {
-    padding: 10px 12px;
-    margin: 15px 154px;
-    display: flex;
-    align-items: center;
-  }
-
-  .desktop-navigation > ul {
-    display: flex;
-    transform: translateY(-50%);
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 20px;
-    text-align: center;
-  }
-
-  .desktop-navigation > ul > li + li {
-    margin-left: 32px;
-  }
-
-  .main {
-    background-image: url("./images/Header-bg-desktop.png");
-  }
-
-  .main > .headline-section__box {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 0;
-    animation: 0.75s 1 alternate slider;
   }
 }
