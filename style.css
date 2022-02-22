@@ -328,6 +328,7 @@ button:disabled {
   font-weight: 700;
   font-style: normal;
   font-size: 32px;
+  margin-bottom: 73px;
   line-height: 44px;
   text-align: center;
   color: #172b4d;
@@ -397,6 +398,7 @@ textarea:focus {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 17px;
+  margin-bottom: 162px;
   line-height: 24px;
   color: #fff;
   background-color: #ff6b00;
