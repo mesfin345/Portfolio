@@ -8,310 +8,338 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <a href="#" class="header-logo">Mesfin</a>
-      <nav class="header-menu-btn mobile">
-        <div class="menu-btn__ham one"></div>
-        <div class="menu-btn__ham two"></div>
-        <div class="menu-btn__ham three"></div>
-      </nav>
-      <nav class="desktop-navigation">
-        <ul>
-          <li class="nav__items nav-mobile">
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav__items nav-mobile"><a href="#about">About</a></li>
-          <li class="nav__items nav-mobile"><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <header class="hamburger">
+      <div class="head">
+        <div class="name-me">Mesfin Haile</div>
+        <img id="btn" class="mob-img" src="icons/menu.png" alt="menu" />
+        <div class="desk-head">
+          <ul class="desk-li">
+            <li class="close">
+              <img id="close" src="icons/Icon.png" alt="" />
+            </li>
+            <li class="common-li" id="portfolio">Portfolio</li>
+            <li class="common-li" id="about">About</li>
+            <li class="common-li" id="contact">Contacts</li>
+            <li class="common-li gone">
+              <img class="desk-img" alt="desktop-img" src="icons/Rec.png" />
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-
-    <main>
-      <section class="main headline-section">
-        <div class="headline-section__box">
-          <h1 class="headline-section__title">
-            I'm Mesfin<br />Glad to see you!
-          </h1>
-          <p class="headline-section__cont">
-            I’m a software developer! I can help you build a product , feature
-            or website Look through some of my work and experience! If you like
-            what you see and have a project you need coded, don’t hestiate to
-            contact me.
+    <section class="heading">
+      <div class="main-text">
+        <div class="text">
+          <h1>Hey there.<br />I'm Mesfin</h1>
+        </div>
+        <p class="text1">I'am a Software Developer</p>
+        <div class="text2">
+          I can help you build a product , feature or website Look through some
+          of my work and experience! If you like what you see and have a project
+          you need coded, don’t hestiate to contact me.
+        </div>
+      </div>
+      <ul class="contacts">
+        <li>
+          <a href="https://github.com/Yoz21"
+            ><img src="icons/github.svg" alt="github addres"
+          /></a>
+        </li>
+        <li>
+          <a href="https://angel.co"
+            ><img src="icons/angelist.png" alt="angelist addres"
+          /></a>
+        </li>
+        <li>
+          <a href="https://medium.com"
+            ><img src="icons/medium.png" alt="medium addres"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/feed/">
+            <img src="icons/Linkedin.svg" alt="linkedin addres" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/Yoz44297468">
+            <img src="icons/twitter.png" alt="twitter address"
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <section class="work-section">
+      <div class="part1">
+        <h2 class="recent-work">My Recent Works</h2>
+        <hr class="line11" />
+      </div>
+      <div class="MY-works">
+        <div class="part2">
+          <img
+            class="placeholder"
+            src="icons/ImgPlaceholder.png"
+            alt="gymfit"
+          />
+        </div>
+        <div class="post stories">
+          <span class="mini-title"> Multi-Post Stories</span>
+          <p class="dummy-text">
+            A daily selection of privately personalized reads; no accounts or
+            sign-ups required. has been the industry's standard dummy text ever
+            since the 1500s, when an unknown printer took a standard dummy text.
           </p>
-          <h2 class="headline-section__sub-title">LET’S CONNECT</h2>
-          <ul class="headline-section__social">
-            <li class="headline-section__social--item">
-              <a
-                href="https://twitter.com/login?lang=en"
-                class="social-icon twitter"
-                ><img src="icons/twitter.png" alt="twitter icon"
-              /></a>
-            </li>
-            <li class="headline-section__social--item">
-              <a
-                href="https://www.linkedin.com/feed/"
-                class="social-icon linkedin"
-                ><img src="icons/Linkedin.svg" alt="Linkedin icon"
-              /></a>
-            </li>
-            <li class="headline-section__social--item">
-              <a href="#" class="social-icon linkedin"
-                ><img src="icons/medium.png" alt="medium icon"
-              /></a>
-            </li>
-            <li class="headline-section__social--item">
-              <a href="https://github.com/mesfin345" class="social-icon github"
-                ><img src="icons/github.svg" alt="github icon"
-              /></a>
-            </li>
-            <li class="headline-section__social--item">
-              <a href="#" class="social-icon chill"
-                ><img src="icons/angelist.png" alt="angelist icon"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- WORK -->
-      <section class="work-section-container">
-        <div class="work-section-box">
-          <div class="work-section">
-            <div class="work-section-featured-image mobile">
-              <img src="images/SnapshootPortfolio.png" alt="card snap" />
+          <div class="css-container">
+            <div class="css">
+              <span>css</span>
             </div>
-            <div class="work-section-content">
-              <h3 class="work-section-title">Tonic</h3>
-              <div class="subtitle-list">
-                <p class="subitle-canopy">CANOPY</p>
-                <div class="circle-dot"></div>
-                <p class="subtitle-stack">Back End Dev</p>
-                <div class="circle-dot"></div>
-                <p class="subtitle-year">2018</p>
-              </div>
-              <p class="work-section-description">
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
-              </p>
-              <ul class="work-section-stack">
-                <li class="tech-stack">html</li>
-                <li class="tech-stack">css</li>
-                <li class="tech-stack">javaScript</li>
-              </ul>
-              <button type="button" class="btn see-project modal-0">
-                see project
-              </button>
+            <div class="css">
+              <span>html</span>
+            </div>
+            <div class="css">
+              <span>bootstrap</span>
+            </div>
+            <div class="css">
+              <span>Ruby</span>
             </div>
           </div>
-          <div class="work-section">
-            <div class="work-section-featured-image mobile">
-              <img src="images/SnapshootPortfolio(1).png" alt="card snap" />
-            </div>
-            <div class="work-section-content">
-              <h3 class="work-section-title">Multi-post stories</h3>
-              <div class="subtitle-list">
-                <p class="subitle-canopy">CANOPY</p>
-                <div class="circle-dot"></div>
-                <p class="subtitle-stack">Back End Dev</p>
-                <div class="circle-dot"></div>
-                <p class="subtitle-year">2018</p>
-              </div>
-              <p class="work-section-description">
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
-              </p>
-              <ul class="work-section-stack">
-                <li class="tech-stack">html</li>
-                <li class="tech-stack">css</li>
-                <li class="tech-stack">javaScript</li>
-              </ul>
-              <button type="button" class="btn see-project modal-1">
-                see project
-              </button>
-            </div>
-          </div>
-          <div class="work-section">
-            <div class="work-section-featured-image mobile">
-              <img src="images/SnapshootPortfolio(2).png" alt="card snap" />
-            </div>
-            <div class="work-section-content">
-              <h3 class="work-section-title">Facebook 360</h3>
-              <div class="subtitle-list">
-                <p class="subitle-canopy">CANOPY</p>
-                <div class="circle-dot"></div>
-                <p class="subtitle-stack">Back End Dev</p>
-                <div class="circle-dot"></div>
-                <p class="subtitle-year">2018</p>
-              </div>
-              <p class="work-section-description">
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
-              </p>
-              <ul class="work-section-stack">
-                <li class="tech-stack">html</li>
-                <li class="tech-stack">css</li>
-                <li class="tech-stack">javaScript</li>
-              </ul>
-              <button type="button" class="btn see-project modal-2">
-                see project
-              </button>
-            </div>
-          </div>
-          <div class="work-section">
-            <div class="work-section-featured-image mobile">
-              <img src="images/SnapshootPortfolio(3).png" alt="card snap" />
-            </div>
-
-            <div class="work-section-content">
-              <h3 class="work-section-title">Uber Navigation</h3>
-              <div class="subtitle-list">
-                <p class="subitle-canopy">CANOPY</p>
-                <div class="circle-dot"></div>
-                <p class="subtitle-stack">Back End Dev</p>
-                <div class="circle-dot"></div>
-                <p class="subtitle-year">2018</p>
-              </div>
-              <p class="work-section-description">
-                A daily selection of privately personalized reads; no accounts
-                or sign-ups required.
-              </p>
-              <ul class="work-section-stack">
-                <li class="tech-stack">html</li>
-                <li class="tech-stack">css</li>
-                <li class="tech-stack">javaScript</li>
-              </ul>
-              <button type="button" class="btn see-project modal-3">
-                see project
-              </button>
-            </div>
+          <div class="see-project">
+            <button class="invite one">See Project</button>
           </div>
         </div>
-      </section>
-      <!-- ABOUT SECTION -->
-      <section class="about-section">
-        <div class="about-section-box">
-          <div class="headline-sec">
-            <h2 class="headline-section__title">About<br />Myself</h2>
-            <p class="headline-section__desc">
-              I’m a software developer! I can help you build a product , feature
-              or website Look through some of my work and experience! If you
-              like what you see and have a project you need coded, don’t
-              hestiate to contact me.
+      </div>
+      <div class="professional-art">
+        <div class="art-container one">
+          <div class="art-item">
+            <div class="test"></div>
+          </div>
+          <p class="invite">See Project</p>
+        </div>
+        <div class="art-container two">
+          <div class="art-item">
+            <div class="test"></div>
+            <h2 class="data">
+              Data Dashboard<br />
+              Healthcare
+            </h2>
+            <p class="selections">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required. has been the industry's standard
             </p>
-            <h2 class="headline-section__sub-title">LET’S CONNECT</h2>
-            <ul class="headline-section__social">
-              <li class="headline-section__social--item">
-                <a href="#" class="social-icon twitter"
-                  ><img src="icons/twitter.png" alt="twitter icon"
-                /></a>
-              </li>
-              <li class="headline-section__social--item">
-                <a href="#" class="social-icon linkedin"
-                  ><img src="icons/Linkedin.svg" alt="Linkedin icon"
-                /></a>
-              </li>
-              <li class="headline-section__social--item">
-                <a href="#" class="social-icon linkedin"
-                  ><img src="icons/medium.png" alt="medium icon"
-                /></a>
-              </li>
-              <li class="headline-section__social--item">
-                <a href="#" class="social-icon github"
-                  ><img src="icons/github.svg" alt="github icon"
-                /></a>
-              </li>
-              <li class="headline-section__social--item">
-                <a href="#" class="social-icon chill"
-                  ><img src="icons/angelist.png" alt="angelist icon"
-                /></a>
-              </li>
+            <ul class="buttons">
+              <li>html</li>
+              <li>bootstrap</li>
+              <li>Ruby</li>
             </ul>
-
-            <button type="button" class="btn resume">Get my resume</button>
           </div>
-          <ul class="language-section-container">
-            <li class="language-section open">
-              <div class="language-title-section">
-                <button type="button" class="drop-down down">Language</button>
-                <img src="./icons/expanded.svg" alt="expanded arrow" />
-              </div>
-
-              <ul class="language-section-box-sec">
-                <li class="language-section-box">
-                  <img src="./images/pic1.png" alt="javaScript logo" />
-                  <p class="language-name">JavaScript</p>
-                </li>
-                <li class="language-section-box">
-                  <img src="./images/pic2.png" alt="html logo" />
-                  <p class="language-name">HTML</p>
-                </li>
-                <li class="language-section-box">
-                  <img src="./images/pic3.png" alt="css logo" />
-                  <p class="language-name">Css</p>
-                </li>
-              </ul>
-            </li>
-            <li class="language-section">
-              <div class="language-title-section">
-                <button type="button" class="drop-down down">Framework</button>
-                <img src="./icons/not-expanded.svg" alt="not-expanded arrow" />
-              </div>
-            </li>
-            <li class="language-section">
-              <div class="language-title-section">
-                <button type="button" class="drop-down down">Skills</button>
-                <img src="./icons/not-expanded.svg" alt="not-expanded arrow" />
-              </div>
-            </li>
+          <p class="invite">See Project</p>
+        </div>
+        <div class="art-container three">
+          <div class="art-item">
+            <div class="test"></div>
+            <h2 class="data">Website Portfolio</h2>
+            <p class="selections">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required. has been the industry's standard
+            </p>
+            <ul class="buttons">
+              <li>html</li>
+              <li>bootstrap</li>
+              <li>Ruby</li>
+            </ul>
+          </div>
+          <p class="invite">See Project</p>
+        </div>
+        <div class="art-container four">
+          <div class="art-item">
+            <div class="test"></div>
+            <h2 class="data">
+              Professional Art<br />
+              Printing Data
+            </h2>
+            <p class="selections">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required. has been the industry's standard
+            </p>
+            <ul class="buttons">
+              <li>html</li>
+              <li>bootstrap</li>
+              <li>Ruby</li>
+            </ul>
+          </div>
+          <p class="invite">See Project</p>
+        </div>
+        <div class="art-container five">
+          <div class="art-item">
+            <div class="test"></div>
+            <h2 class="data">
+              Data Dashboard<br />
+              Healthcare
+            </h2>
+            <p class="selections">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required. has been the industry's standard
+            </p>
+            <ul class="buttons">
+              <li>html</li>
+              <li>bootstrap</li>
+              <li>Ruby</li>
+            </ul>
+          </div>
+          <p class="invite">See Project</p>
+        </div>
+        <div class="art-container six">
+          <div class="art-item">
+            <div class="test"></div>
+            <h2 class="data">Website Portfolio</h2>
+            <p class="selections">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required. has been the industry's standard
+            </p>
+            <ul class="buttons">
+              <li>html</li>
+              <li>bootstrap</li>
+              <li>Ruby</li>
+            </ul>
+          </div>
+          <p class="invite">See Project</p>
+        </div>
+      </div>
+    </section>
+    <section class="about-me">
+      <div class="the-resume">
+        <div class="myresume">
+          <h3 class="h3-title">About me</h3>
+          <p class="about-paragraph">
+            Hello I’m a software developer! I can help you build a product ,
+            feature or website Look through some of my work and experience! If
+            you like what you see and have a project you need coded, don’t
+            hestiate to contact me.
+          </p>
+          <button class="resume">Get My Resume</button>
+        </div>
+      </div>
+      <div>
+        <hr class="line222" />
+      </div>
+      <div class="work-on">
+        <div class="all-about">
+          <h3 class="best">
+            <img src="icons/Rectangle55.png" alt="rectangl" /> Language
+          </h3>
+          <ul class="list">
+            <li>Javascript</li>
+            <li>Ruby</li>
+            <li>Html</li>
+            <li>Css</li>
           </ul>
         </div>
-      </section>
-      <!-- contact-section -->
-      <section class="contact-form">
-        <div class="contact-form-section">
-          <div class="contact-form-card">
-            <h2 class="contact-form-title">Contact me</h2>
-            <p class="contact-form-description">
-              If you have an application you are interested in developing, a
-              feature that you need built or a project that needs coding. I’d
-              love to help with it
-            </p>
-          </div>
-          <form
-            id="form"
-            action="https://formspree.io/f/mjvlgvab"
-            method="post"
-          >
-            <label for="username"
-              ><input
-                type="text"
-                required
-                placeholder="Full Name"
-                maxlength="30"
-                id="username"
-            /></label>
-            <label for="Email"
-              ><input
-                type="Email"
-                id="Email"
-                name="Email"
-                required
-                maxlength="30"
-                placeholder="Your Email"
-            /></label>
-            <textarea
-              id="message"
-              cols="30"
-              rows="10"
-              maxlength="500"
-              placeholder="Write your message here"
-              required
-            ></textarea>
-            <div class="submit-button">
-              <button type="submit">Get in touch</button>
-            </div>
-          </form>
+        <div class="all-about">
+          <h3 class="best">
+            <img src="icons/Rectangle56.png" alt="rectangle" /> Frameworks
+          </h3>
+          <ul class="list">
+            <li>Bootstrap</li>
+            <li>Ruby on Rails</li>
+            <li>Rspec</li>
+            <li>CapyBara</li>
+            <li>Selenium</li>
+          </ul>
         </div>
-      </section>
-    </main>
+        <div class="all-about">
+          <h3 class="best">
+            <img src="icons/Rectangle57.png" alt="circle" /> Skills
+          </h3>
+          <ul class="list">
+            <li>Codekit</li>
+            <li>Github</li>
+            <li>Codepen</li>
+            <li>Gitlab</li>
+            <li>Terminal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="contact-form">
+      <div class="the-contact">
+        <p class="contact-p">
+          I'm always interested in hearing about new projects, so if you'd like
+          to chat please get in touch.
+        </p>
+
+        <form action="https://formspree.io/f/xnqwjqwy" method="post">
+          <div class="input__sec">
+            <div class="name">
+              <label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                  minlength="2"
+                  maxlength="30"
+                />
+              </label>
+            </div>
+            <p>
+              <label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  required
+                />
+              </label>
+            </p>
+            <label>
+              <textarea
+                name="textarea"
+                required
+                minlength="2"
+                maxlength="500"
+                placeholder="Hello Vistor! Glad to see you!"
+              ></textarea>
+            </label>
+            <div class="btn__container">
+              <button type="submit" name="submit" class="btn__submit">
+                Get in touch
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="hr1">
+        <hr class="hr" />
+      </div>
+      <div class="last-contact">
+        <ul class="footer-contacts">
+          <li>
+            <a href="https://github.com/Yoz21"
+              ><img src="icons/github.svg" alt="github addres"
+            /></a>
+          </li>
+          <li>
+            <a href="https://angel.co"
+              ><img src="icons/angelist.png" alt="angelist addres"
+            /></a>
+          </li>
+          <li>
+            <a href="https://medium.com"
+              ><img src="icons/medium.png" alt="medium addres"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/feed/">
+              <img src="icons/Linkedin.svg" alt="linkedin addres" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Yoz44297468">
+              <img src="icons/twitter.png" alt="twitter address"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="main.js"></script>
   </body>
 </html>
