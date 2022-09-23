@@ -890,4 +890,10 @@ textarea:focus {
   hr {
     margin-bottom: 20px;
   }
+
+  .about-me {
+    background-image: url(icons/illustration-about-me-mobile.png);
+    background-repeat: no-repeat;
+    background-position: right top 26%;
+  }
 }
