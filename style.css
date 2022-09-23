@@ -534,6 +534,7 @@ textarea:focus {
     width: 23px;
     height: inherit;
   }
+
   .heading {
     display: flex;
     flex-direction: row-reverse;
@@ -544,6 +545,7 @@ textarea:focus {
     background-position-y: -668px;
     background-position-x: 510px;
   }
+
   .common-li {
     border-bottom: none;
   }
@@ -671,6 +673,7 @@ textarea:focus {
     color: rgba(255, 255, 255, 1);
     padding: 8px;
   }
+
   .professional-art {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -681,7 +684,9 @@ textarea:focus {
     background-image: url(icons/ImgPlaceholder1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
   }
+
   .art-container.four {
     background-image: url(icons/ImgPlaceholder4.png);
     background-repeat: no-repeat;
@@ -700,10 +705,6 @@ textarea:focus {
     background-image: url(icons/imageplaceholder303.png);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  .art-container.one {
-    position: relative;
   }
 
   .art-container > .invite {
@@ -747,6 +748,7 @@ textarea:focus {
   .art-container.one .invite {
     display: block;
   }
+
   .about-me {
     display: flex;
     flex-direction: column;
@@ -811,6 +813,7 @@ textarea:focus {
     font-weight: 400;
     font-size: 22px;
   }
+
   .contact-form {
     padding: 0;
   }
