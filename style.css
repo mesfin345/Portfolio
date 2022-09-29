@@ -373,7 +373,7 @@ input {
   border-left: 0;
 }
 
-label > input,
+input,
 textarea {
   width: 90%;
   text-align: left;
@@ -383,8 +383,6 @@ textarea {
   width: 90%;
   padding: 12px;
   height: 114px;
-
-  /* Theme 3 / Neutral 10 */
   background: #fbf8f7;
   border: none;
   font-family: "Inter", sans-serif;
@@ -411,6 +409,7 @@ textarea:focus {
   margin-bottom: 162px;
   line-height: 24px;
   color: #fff;
+  border-radius: 4px;
   background-color: #ff6b00;
 }
 
@@ -678,6 +677,10 @@ textarea:focus {
     padding: 8px;
   }
 
+  .art-container {
+    height: 435px;
+  }
+
   .professional-art {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -749,10 +752,6 @@ textarea:focus {
     color: #fff;
     font-weight: 500;
     font-size: 15px;
-  }
-
-  .art-container {
-    height: 435px;
   }
 
   .art-container.one .invite {
