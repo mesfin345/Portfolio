@@ -677,10 +677,6 @@ textarea:focus {
     padding: 8px;
   }
 
-  .art-container {
-    height: 435px;
-  }
-
   .professional-art {
     display: grid;
     grid-template-columns: auto auto auto;
