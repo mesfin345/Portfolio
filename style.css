@@ -548,6 +548,12 @@ textarea:focus {
 
   .common-li {
     border-bottom: none;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
   }
 
   .main-text {
@@ -824,6 +830,8 @@ textarea:focus {
     text-align: start;
     align-items: baseline;
     justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   form {
