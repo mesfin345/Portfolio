@@ -684,6 +684,10 @@ textarea:focus {
     grid-gap: 10px;
   }
 
+   .art-container {
+    height: 435px;
+  }
+  
   .professional-art .art-container:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
@@ -749,10 +753,6 @@ textarea:focus {
     color: #fff;
     font-weight: 500;
     font-size: 15px;
-  }
-
-  .art-container {
-    height: 435px;
   }
 
   .art-container.one .invite {
