@@ -46,9 +46,14 @@ section {
 
 .contacts {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   gap: 18px;
   list-style: none;
+}
+
+.contacts a .icons {
+  fill: #fff;
 }
 
 .text {
@@ -399,6 +404,7 @@ textarea:focus {
 
 .btn__container {
   margin-top: 12px;
+  margin-bottom: -92px;
 }
 
 .btn__container > button {
@@ -548,11 +554,11 @@ textarea:focus {
 
   .common-li {
     border-bottom: none;
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: 600;
     line-height: 20px;
-    letter-spacing: 0em;
+    letter-spacing: 0;
     text-align: center;
   }
 
@@ -892,7 +898,7 @@ textarea:focus {
   .last-contact {
     align-self: center;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: -121px;
   }
 
   hr {
