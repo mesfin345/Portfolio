@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-  background-color: #1c1a19;
   padding: 0;
   margin: 0;
   font-family: Inter, sans-serif;
@@ -46,9 +45,14 @@ section {
 
 .contacts {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   gap: 18px;
   list-style: none;
+}
+
+.contacts a .icons {
+  fill: #fff;
 }
 
 .text {
@@ -246,10 +250,10 @@ button:disabled {
 .h3-title {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
-  font-weight: normal;
   font-size: 72px;
   color: #ff6b00;
   margin-bottom: 24px;
+  font-weight: 400;
 }
 
 .css {
@@ -266,69 +270,15 @@ button:disabled {
   display: flex;
 }
 
-.resume {
-  background: #ff6b00;
-  padding: 7px;
-  color: white;
-  margin-bottom: 88px;
-}
-
-.about-paragraph {
-  color: #f4f5f7;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-}
-
-.work-on {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  /* width: 100%; */
-  padding: 120px 24px;
-}
-
-.list {
-  list-style: none;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
 .list li {
   padding: 10px 0;
 }
 
-.best {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-family: "InaiMathi", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 32px;
-}
-
-.contact-form {
-  background: #ffff;
-}
-
-.contact-form > .the-contact {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.contact-p {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 40px !important;
+  width: 40%;
 }
 
 .the-contact > .contact-p {
@@ -338,7 +288,9 @@ button:disabled {
   font-size: 32px;
   margin-bottom: 73px;
   line-height: 44px;
-  text-align: center;
+  width: 416px;
+
+  /* text-align: center; */
   color: #172b4d;
 }
 
@@ -381,11 +333,10 @@ textarea {
   width: 90%;
   padding: 12px;
   height: 114px;
-
-  /* Theme 3 / Neutral 10 */
   background: #fbf8f7;
   border: none;
   font-family: "Inter", sans-serif;
+  font-size: 15px;
   font-weight: 400;
   font-style: normal;
   line-height: 24px;
@@ -399,6 +350,7 @@ textarea:focus {
 
 .btn__container {
   margin-top: 12px;
+  margin-bottom: -92px;
 }
 
 .btn__container > button {
@@ -431,16 +383,6 @@ textarea:focus {
   max-width: 100%;
 }
 
-.footer-contacts {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  width: 100%;
-  gap: 10px;
-  padding: 0;
-}
-
 .desk-li-menu {
   background-color: #3c3a39;
   width: 100%;
@@ -466,8 +408,6 @@ textarea:focus {
   font-weight: bold;
   padding-bottom: 16px;
   border-bottom: solid 1px #6f6c6b;
-
-  /* text-align: center; */
   margin: auto;
 }
 
@@ -548,7 +488,7 @@ textarea:focus {
 
   .common-li {
     border-bottom: none;
-    font-family: Inter;
+    font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: 600;
     line-height: 20px;
@@ -760,118 +700,137 @@ textarea:focus {
     flex-direction: column;
     align-items: stretch;
     padding: 100px;
-  }
-
-  .myresume {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
-  }
-
-  .the-resume {
     background-image: url(icons/illustration-about-me.png);
     background-repeat: no-repeat;
-    background-position-x: 530px;
-    background-position-y: 0.47px;
+    background-size: 41% 27%;
+    background-position: 100% 18%;
   }
+}
 
-  .h3-title {
-    font-family: "crete round", sans-serif;
-    font-weight: 400;
-    font-size: 72px;
-  }
+.myresume {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  margin-left: 77px;
+}
 
-  .about-paragraph {
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 65px;
-  }
+.about-paragraph {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 65px;
+  width: 530px;
+  line-height: 35px;
+  color: #f4f5f7;
+  font-style: normal;
+}
 
-  .resume {
-    font-weight: 700;
-    font-size: 17px;
-    padding: 12px;
-  }
+.resume {
+  font-weight: 700;
+  font-size: 17px;
+  padding: 12px;
+  background: #ff6b00;
+  color: white;
+  margin-bottom: 88px;
+}
 
-  .work-on {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-  }
+.work-on {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 120px 24px;
+}
 
-  .line222 {
-    border: 1px solid rgba(255, 255, 255, 1);
-    margin: 0;
-    margin-top: 75px;
-  }
+.line222 {
+  border: 1px solid rgba(255, 255, 255, 1);
+  margin: 0;
+  margin-top: 75px;
+}
 
-  .best {
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-  }
+.best {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+}
 
-  .list {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
-  }
+.list {
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
 
-  .contact-form {
-    padding: 0;
-  }
+.bottom-line {
+  margin-top: 50px;
+  border-bottom: 1.5px solid #dfe1e6;
+  width: 96rem;
+  margin-left: 83px;
+}
 
-  .the-contact {
-    display: flex !important;
-    flex-direction: row !important;
-    text-align: start;
-    align-items: baseline;
-    justify-content: space-around;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
+.contact-form {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: #ffff;
+}
 
-  form {
-    width: 50%;
-  }
+.the-contact {
+  display: flex;
+  flex-direction: row;
+  text-align: start;
+  padding: 130px 0;
+  align-items: center;
+  justify-content: center;
+  margin-left: 48px;
+  gap: 24px;
+}
 
-  .contact-p {
-    font-family: "Inter", sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 40px !important;
-    width: 40%;
-  }
+form {
+  width: 684px;
+}
 
-  textarea {
-    font-size: 15px;
-    font-weight: 400;
-  }
+.input__sec {
+  text-align: start;
+}
 
-  .input__sec {
-    text-align: start;
-  }
+.hr1 {
+  margin: 0;
+  margin-top: 40px;
+  align-self: stretch;
+  padding: 0;
+  margin-bottom: 17px;
+}
 
-  .hr1 {
-    margin: 0;
-    margin-top: 40px;
-    align-self: stretch;
-    padding: 0;
-    margin-bottom: 17px;
-  }
+.last-contact {
+  align-self: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
 
-  .last-contact {
-    align-self: center;
-    justify-content: center;
-    margin-bottom: 25px;
-  }
-
-  .footer-contacts {
-    gap: 35px;
-    font-weight: 500;
-  }
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  font-weight: 500;
+  width: 100%;
+  gap: 10px;
+  padding: 0;
 }
 
 @media (max-width: 990px) {
@@ -892,7 +851,7 @@ textarea:focus {
   .last-contact {
     align-self: center;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: -121px;
   }
 
   hr {
@@ -903,5 +862,12 @@ textarea:focus {
     background-image: url(icons/illustration-about-me-mobile.png);
     background-repeat: no-repeat;
     background-position: right top 26%;
+  }
+
+  .contact-form > .the-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
   }
 }
