@@ -554,7 +554,7 @@ textarea:focus {
 
   .common-li {
     border-bottom: none;
-    font-family: 'Inter';
+    font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: 600;
     line-height: 20px;
