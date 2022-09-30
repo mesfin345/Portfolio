@@ -179,8 +179,6 @@ button:hover {
   letter-spacing: 3%;
   line-height: 24px;
   padding: 12px;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
 }
 
 button:active {
@@ -418,8 +416,6 @@ textarea:focus {
   background-color: #fff5e1;
   color: #ff6b00;
   border: 1px solid #f55000;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
 }
 
 .footer-container {
@@ -552,6 +548,12 @@ textarea:focus {
 
   .common-li {
     border-bottom: none;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
   }
 
   .main-text {
@@ -684,16 +686,6 @@ textarea:focus {
     grid-gap: 10px;
   }
 
-  .art-container {
-    height: 435px;
-  }
-
-  .professional-art .art-container:hover {
-    transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-  }
-
   .art-container.one {
     background-image: url(icons/ImgPlaceholder1.png);
     background-repeat: no-repeat;
@@ -753,6 +745,10 @@ textarea:focus {
     color: #fff;
     font-weight: 500;
     font-size: 15px;
+  }
+
+  .art-container {
+    height: 435px;
   }
 
   .art-container.one .invite {
@@ -834,6 +830,8 @@ textarea:focus {
     text-align: start;
     align-items: baseline;
     justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
   form {
@@ -845,12 +843,6 @@ textarea:focus {
     font-weight: 700 !important;
     font-size: 40px !important;
     width: 40%;
-  }
-
-  .contact-p:hover {
-    transform: rotate(45deg);
-    transition: transform 0.7s ease-in-out;
-    cursor: pointer;
   }
 
   textarea {
@@ -880,17 +872,6 @@ textarea:focus {
     gap: 35px;
     font-weight: 500;
   }
-
-  .animate-logo {
-    animation-duration: 1s;
-    animation-name: animate-logo;
-  }
-
-  @keyframes animate-logo {
-    0% {
-      transform: rotate(360deg);
-    }
-  }
 }
 
 @media (max-width: 990px) {
@@ -915,7 +896,7 @@ textarea:focus {
   }
 
   hr {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   .about-me {
