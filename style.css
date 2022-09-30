@@ -46,9 +46,14 @@ section {
 
 .contacts {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   gap: 18px;
   list-style: none;
+}
+
+.contacts a .icons {
+  fill: #fff;
 }
 
 .text {
@@ -399,6 +404,7 @@ textarea:focus {
 
 .btn__container {
   margin-top: 12px;
+  margin-bottom: -92px;
 }
 
 .btn__container > button {
@@ -892,7 +898,7 @@ textarea:focus {
   .last-contact {
     align-self: center;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: -121px;
   }
 
   hr {
