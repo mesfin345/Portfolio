@@ -692,6 +692,12 @@ textarea:focus {
     grid-gap: 10px;
   }
 
+  .professional-art .art-container:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
   .art-container.one {
     background-image: url(icons/ImgPlaceholder1.png);
     background-repeat: no-repeat;
@@ -851,6 +857,11 @@ textarea:focus {
     width: 40%;
   }
 
+  .contact-p:hover {
+    transform: rotate(15deg) translateX(5px);
+    cursor: pointer;
+  }
+
   textarea {
     font-size: 15px;
     font-weight: 400;
@@ -877,6 +888,17 @@ textarea:focus {
   .footer-contacts {
     gap: 35px;
     font-weight: 500;
+  }
+}
+
+.animate-logo {
+  animation-duration: 1s;
+  animation-name: animate-logo;
+}
+
+@keyframes animate-logo {
+  0% {
+    transform: rotate(360deg);
   }
 }
 
