@@ -10,10 +10,10 @@ const about = document.querySelector(".about-me");
 const contactLink = document.querySelector("#contact");
 const contact = document.querySelector(".last-contact");
 
-function closeBtn() {
-  nav.classList.remove("desk-li-menu");
-  nav.style.display = "none";
-}
+// function closeBtn() {
+//   nav.classList.remove("desk-li-menu");
+//   nav.style.display = "none";
+// }
 
 function openPortfolio() {
   portfolio.scrollIntoView();
