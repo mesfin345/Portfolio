@@ -626,6 +626,12 @@ textarea:focus {
     grid-gap: 10px;
   }
 
+  .professional-art .art-container:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
   .art-container.one {
     background-image: url(icons/ImgPlaceholder1.png);
     background-repeat: no-repeat;
@@ -782,6 +788,16 @@ textarea:focus {
   margin-left: 83px;
 }
 
+  .the-contact {
+    display: flex !important;
+    flex-direction: row !important;
+    text-align: start;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
 .contact-form {
   display: flex;
   align-items: center;
@@ -803,6 +819,17 @@ textarea:focus {
 form {
   width: 684px;
 }
+
+  .contact-p:hover {
+    transform: rotate(15deg) translateX(5px);
+    cursor: pointer;
+  }
+
+  textarea {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
 
 .input__sec {
   text-align: start;
@@ -831,6 +858,17 @@ form {
   width: 100%;
   gap: 10px;
   padding: 0;
+}
+
+.animate-logo {
+  animation-duration: 1s;
+  animation-name: animate-logo;
+}
+
+@keyframes animate-logo {
+  0% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 990px) {
