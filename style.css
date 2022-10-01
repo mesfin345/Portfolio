@@ -6,7 +6,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .hamburger {
@@ -32,8 +32,11 @@ body {
   margin-left: 53px;
 }
 
-section {
+.heading {
   background: #1c1a19;
+}
+
+section {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -45,7 +48,6 @@ section {
 
 .contacts {
   display: flex;
-  align-items: center;
   justify-content: space-around;
   gap: 18px;
   list-style: none;
@@ -250,10 +252,10 @@ button:disabled {
 .h3-title {
   font-family: "Crete Round", sans-serif;
   font-style: normal;
+  font-weight: normal;
   font-size: 72px;
   color: #ff6b00;
   margin-bottom: 24px;
-  font-weight: 400;
 }
 
 .css {
@@ -270,26 +272,59 @@ button:disabled {
   display: flex;
 }
 
+.resume {
+  background: #ff6b00;
+  padding: 7px;
+  color: white;
+  margin-bottom: 88px;
+}
+
+.about-paragraph {
+  color: #f4f5f7;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.work-on {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* width: 100%; */
+  padding: 120px 24px;
+}
+
+.list {
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
 .list li {
   padding: 10px 0;
 }
 
-.contact-p {
-  font-family: "Inter", sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 40px !important;
-  width: 40%;
-}
-
-.the-contact > .contact-p {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
+.best {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "InaiMathi", sans-serif;
   font-style: normal;
+  font-weight: bold;
   font-size: 32px;
-  margin-bottom: 73px;
-  line-height: 44px;
-  width: 416px;
-  color: #172b4d;
 }
 
 .the-contact > * + * {
@@ -327,9 +362,28 @@ textarea {
   text-align: left;
 }
 
+textarea {
+  width: 90%;
+  padding: 12px;
+  height: 114px;
+
+  /* Theme 3 / Neutral 10 */
+  background: #fbf8f7;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  color: #3c3a39;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
 .btn__container {
   margin-top: 12px;
-  margin-bottom: -92px;
 }
 
 .btn__container > button {
@@ -360,6 +414,16 @@ textarea {
   background: #dfe1e6;
   height: 1px;
   max-width: 100%;
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  gap: 10px;
+  padding: 0;
 }
 
 .desk-li-menu {
@@ -406,6 +470,12 @@ textarea {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 32px;
+}
+
+.last-contact {
+  align-self: center;
+  justify-content: center;
+  margin-bottom: -95px;
 }
 
 @media (min-width: 990px) {
@@ -599,12 +669,6 @@ textarea {
     padding: 8px;
   }
 
-  .professional-art {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-  }
-
   .art-container {
     height: 435px;
   }
@@ -613,6 +677,12 @@ textarea {
     transform: scale(1.05);
     transition: all 0.5s ease-in-out;
     cursor: pointer;
+  }
+
+  .professional-art {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
   }
 
   .art-container.one {
@@ -690,139 +760,139 @@ textarea {
     background-size: 41% 27%;
     background-position: 100% 18%;
   }
+
+  .bottom-line {
+    margin-top: 50px;
+    border-bottom: 1.5px solid #dfe1e6;
+    width: 96rem;
+    margin-left: 83px;
+  }
+
+  .contact-form {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: #ffff;
+  }
+
+  .myresume {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+  }
+
+  .h3-title {
+    font-family: "crete round", sans-serif;
+    font-weight: 400;
+    font-size: 72px;
+  }
+
+  .about-paragraph {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 65px;
+  }
+
+  .resume {
+    font-weight: 700;
+    font-size: 17px;
+    padding: 12px;
+  }
+
+  .work-on {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .line222 {
+    border: 1px solid rgba(255, 255, 255, 1);
+    margin: 0;
+    margin-top: 75px;
+  }
+
+  .best {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  .list {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+  .the-contact {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    padding: 130px 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: 48px;
+    gap: 24px;
+  }
+
+  form {
+    width: 684px;
+  }
+
+  .contact-p:hover {
+    transform: rotate(15deg) translateX(5px);
+    cursor: pointer;
+  }
+
+  textarea {
+    width: 90%;
+    padding: 12px;
+    height: 114px;
+    background: #fbf8f7;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    color: #3c3a39;
+  }
+
+  .input__sec {
+    text-align: start;
+  }
+
+  .hr1 {
+    margin: 0;
+    margin-top: 40px;
+    align-self: stretch;
+    padding: 0;
+    margin-bottom: 17px;
+  }
 }
 
-.myresume {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 50%;
-  margin-left: 77px;
-}
-
-.about-paragraph {
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 65px;
-  width: 530px;
-  line-height: 35px;
-  color: #f4f5f7;
-  font-style: normal;
-}
-
-.resume {
-  font-weight: 700;
-  font-size: 17px;
-  padding: 12px;
-  background: #ff6b00;
-  color: white;
-  margin-bottom: 88px;
-}
-
-.work-on {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 120px 24px;
-}
-
-.line222 {
-  border: 1px solid rgba(255, 255, 255, 1);
-  margin: 0;
-  margin-top: 75px;
-}
-
-.best {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.the-contact > .contact-p {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 32px;
+  margin-bottom: 73px;
+  line-height: 44px;
+  width: 340px;
+  color: #172b4d;
 }
 
-.list {
-  list-style: none;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+.animate-logo {
+  animation-duration: 1s;
+  animation-name: animate-logo;
 }
 
-.bottom-line {
-  margin-top: 50px;
-  border-bottom: 1.5px solid #dfe1e6;
-  width: 96rem;
-  margin-left: 83px;
-}
-
-.contact-form {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  background: #ffff;
-}
-
-.the-contact {
-  display: flex;
-  flex-direction: row;
-  text-align: start;
-  padding: 130px 0;
-  align-items: center;
-  justify-content: center;
-  margin-left: 48px;
-  gap: 24px;
-}
-
-form {
-  width: 684px;
-}
-
-.contact-p:hover {
-  transform: rotate(15deg) translateX(5px);
-  cursor: pointer;
-}
-
-textarea {
-  width: 90%;
-  padding: 12px;
-  height: 114px;
-  background: #fbf8f7;
-  border: none;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 24px;
-  color: #3c3a39;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-}
-
-.input__sec {
-  text-align: start;
-}
-
-.hr1 {
-  margin: 0;
-  margin-top: 40px;
-  align-self: stretch;
-  padding: 0;
-  margin-bottom: 17px;
+@keyframes animate-logo {
+  0% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 990px) {
@@ -840,11 +910,11 @@ textarea:focus {
     align-self: stretch;
   }
 
-  .last-contact {
+  /* .last-contact {
     align-self: center;
     justify-content: center;
-    margin-bottom: -121px;
-  }
+    margin-bottom: 15px;
+  } */
 
   hr {
     margin-bottom: 21px;
@@ -856,10 +926,23 @@ textarea:focus {
     background-position: right top 26%;
   }
 
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
   .contact-form > .the-contact {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 24px;
+  }
+
+  .last-contact {
+    align-self: center;
+    justify-content: center;
+    margin-bottom: -135px;
   }
 }
