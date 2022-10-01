@@ -289,8 +289,6 @@ button:disabled {
   margin-bottom: 73px;
   line-height: 44px;
   width: 416px;
-
-  /* text-align: center; */
   color: #172b4d;
 }
 
@@ -327,25 +325,6 @@ label > input,
 textarea {
   width: 90%;
   text-align: left;
-}
-
-textarea {
-  width: 90%;
-  padding: 12px;
-  height: 114px;
-  background: #fbf8f7;
-  border: none;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 24px;
-  color: #3c3a39;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
 }
 
 .btn__container {
@@ -626,6 +605,10 @@ textarea:focus {
     grid-gap: 10px;
   }
 
+  .art-container {
+    height: 435px;
+  }
+
   .professional-art .art-container:hover {
     transform: scale(1.05);
     transition: all 0.5s ease-in-out;
@@ -691,10 +674,6 @@ textarea:focus {
     color: #fff;
     font-weight: 500;
     font-size: 15px;
-  }
-
-  .art-container {
-    height: 435px;
   }
 
   .art-container.one .invite {
@@ -788,16 +767,6 @@ textarea:focus {
   margin-left: 83px;
 }
 
-  .the-contact {
-    display: flex !important;
-    flex-direction: row !important;
-    text-align: start;
-    align-items: baseline;
-    justify-content: space-around;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
 .contact-form {
   display: flex;
   align-items: center;
@@ -820,16 +789,29 @@ form {
   width: 684px;
 }
 
-  .contact-p:hover {
-    transform: rotate(15deg) translateX(5px);
-    cursor: pointer;
-  }
+.contact-p:hover {
+  transform: rotate(15deg) translateX(5px);
+  cursor: pointer;
+}
 
-  textarea {
-    font-size: 15px;
-    font-weight: 400;
-  }
+textarea {
+  width: 90%;
+  padding: 12px;
+  height: 114px;
+  background: #fbf8f7;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  color: #3c3a39;
+}
 
+input:focus,
+textarea:focus {
+  outline: none;
+}
 
 .input__sec {
   text-align: start;
