@@ -614,7 +614,7 @@ textarea {
     transition: all 0.5s ease-in-out;
     cursor: pointer;
   }
-  
+
   .art-container.one {
     background-image: url(icons/ImgPlaceholder1.png);
     background-repeat: no-repeat;
@@ -767,23 +767,12 @@ textarea {
   margin-left: 83px;
 }
 
-  .the-contact {
-    display: flex !important;
-    flex-direction: row !important;
-    text-align: start;
-    align-items: baseline;
-    justify-content: space-around;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
 .contact-form {
   display: flex;
   align-items: center;
   padding: 0;
   background: #ffff;
 }
-
 
 .the-contact {
   display: flex;
@@ -834,8 +823,6 @@ textarea:focus {
   align-self: stretch;
   padding: 0;
   margin-bottom: 17px;
-}
-
 }
 
 @media (max-width: 990px) {
