@@ -825,34 +825,6 @@ textarea:focus {
   margin-bottom: 17px;
 }
 
-.last-contact {
-  align-self: center;
-  justify-content: center;
-  margin-bottom: 25px;
-}
-
-.footer-contacts {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  font-weight: 500;
-  width: 100%;
-  gap: 10px;
-  padding: 0;
-}
-
-.animate-logo {
-  animation-duration: 1s;
-  animation-name: animate-logo;
-}
-
-@keyframes animate-logo {
-  0% {
-    transform: rotate(360deg);
-  }
-}
-
 @media (max-width: 990px) {
   .desk-head {
     display: none;
