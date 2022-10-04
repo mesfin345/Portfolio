@@ -630,6 +630,7 @@ textarea:focus {
   .placeholder {
     height: 448px;
     width: 684px;
+    color: #091e42;
   }
 
   .mini-title {
