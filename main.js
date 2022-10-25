@@ -10,10 +10,13 @@ const about = document.querySelector(".about-me");
 const contactLink = document.querySelector("#contact");
 const contact = document.querySelector(".last-contact");
 
-const seeProjectOne = document.querySelector(".invite.one");
-const deskDialog = document.querySelector(".desk-popup");
-const closeDeskDialogBtn = document.querySelector(".close-popup");
+// <<<<<<< setup-and-mobile-first
+// const seeProjectOne = document.querySelector(".invite.one");
+// const deskDialog = document.querySelector(".desk-popup");
+// const closeDeskDialogBtn = document.querySelector(".close-popup");
 
+// =======
+// >>>>>>> main
 function closeBtn() {
   nav.classList.remove("desk-li-menu");
   nav.style.display = "none";
