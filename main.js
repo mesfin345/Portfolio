@@ -10,9 +10,6 @@ const about = document.querySelector(".about-me");
 const contactLink = document.querySelector("#contact");
 const contact = document.querySelector(".last-contact");
 
-const seeProjectOne = document.querySelector(".invite.one");
-const deskDialog = document.querySelector(".desk-popup");
-const closeDeskDialogBtn = document.querySelector(".close-popup");
 
 function closeBtn() {
   nav.classList.remove("desk-li-menu");
