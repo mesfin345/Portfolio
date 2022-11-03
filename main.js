@@ -14,10 +14,10 @@ const seeProjectOne = document.querySelector(".invite.one");
 const deskDialog = document.querySelector(".desk-popup");
 const closeDeskDialogBtn = document.querySelector(".close-popup");
 
-function closeBtn() {
-  nav.classList.remove("desk-li-menu");
-  nav.style.display = "none";
-}
+// function closeBtn() {
+//   nav.classList.remove("desk-li-menu");
+//   nav.style.display = "none";
+// }
 
 function openPortfolio() {
   portfolio.scrollIntoView();
