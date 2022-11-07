@@ -14,8 +14,8 @@ This is a project of my responsive portfolio website that will hold my proffesio
 
 # Acknowledgment
 
-- for my conding partner
-- my mentor
+- to my conding partner
+- to my mentor
 
 # Link
 
