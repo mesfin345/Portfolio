@@ -4,9 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-  background-color: #1c1a19;
   padding: 0;
   margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .hamburger {
@@ -27,19 +27,21 @@ body {
   font-family: "roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   color: white;
   margin-left: 53px;
 }
 
-section {
+.heading {
   background: #1c1a19;
+}
+
+section {
   color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 120px 24px;
-  background-image: url("icons/Group.png");
   background-repeat: no-repeat;
   background-position: 100% 100%;
 }
@@ -49,6 +51,10 @@ section {
   justify-content: space-around;
   gap: 18px;
   list-style: none;
+}
+
+.contacts a .icons {
+  fill: #fff;
 }
 
 .text {
@@ -97,6 +103,10 @@ h1 {
   display: grid;
 }
 
+.art-container.one {
+  background-image: url(icons/imgplace202.png);
+}
+
 .placeholder {
   width: 327px;
   height: 237px;
@@ -130,10 +140,8 @@ h2 {
   color: #091e42;
 }
 
-.invite-one {
-  padding: 12px;
-  width: 124px;
-  font-size: 10px;
+.invite.one {
+  width: fit-content;
 }
 
 .invite {
@@ -146,7 +154,7 @@ h2 {
   background: #ff6b00;
   padding: 10px 0;
   text-align: center;
-  margin: 0;
+  width: 100%;
 }
 
 .see-project {
@@ -179,6 +187,11 @@ button:hover {
   padding: 12px;
 }
 
+button:active {
+  background-color: #e05304;
+  color: white;
+}
+
 button:disabled {
   background: rgba(244, 241, 240, 1);
   font-family: "Inter", sans-serif;
@@ -203,7 +216,7 @@ button:disabled {
 .art-item {
   display: flex;
   flex-direction: column;
-  background-image: url(icons/ImgPlaceholder1.png);
+  background-image: url(icons/ImgPlaceholder6.png);
   padding: 0 10px;
 }
 
@@ -252,6 +265,7 @@ button:disabled {
   width: 20%;
   text-align: center;
   margin-right: 10px;
+  font-weight: 500;
 }
 
 .css-container {
@@ -311,27 +325,6 @@ button:disabled {
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
-}
-
-.contact-form {
-  background: #ffff;
-}
-
-.contact-form > .the-contact {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.the-contact > .contact-p {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 32px;
-  margin-bottom: 73px;
-  line-height: 44px;
-  text-align: center;
-  color: #172b4d;
 }
 
 .the-contact > * + * {
@@ -454,10 +447,10 @@ textarea:focus {
 
 .common-li {
   color: #fff5e1;
-  font-size: 15px;
+  font-size: 33px;
+  font-weight: bold;
   padding-bottom: 16px;
-
-  /* text-align: center; */
+  border-bottom: solid 1px #6f6c6b;
   margin: auto;
 }
 
@@ -477,6 +470,12 @@ textarea:focus {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 32px;
+}
+
+.last-contact {
+  align-self: center;
+  justify-content: center;
+  margin-bottom: -95px;
 }
 
 @media (min-width: 990px) {
@@ -524,19 +523,7 @@ textarea:focus {
     width: 23px;
     height: inherit;
   }
-}
 
-@media (max-width: 990px) {
-  .desk-head {
-    display: none;
-  }
-
-  .work-on {
-    align-self: center;
-  }
-}
-
-@media (min-width: 990px) {
   .heading {
     display: flex;
     flex-direction: row-reverse;
@@ -546,6 +533,16 @@ textarea:focus {
     background-repeat: no-repeat;
     background-position-y: -668px;
     background-position-x: 510px;
+  }
+
+  .common-li {
+    border-bottom: none;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
   }
 
   .main-text {
@@ -591,9 +588,7 @@ textarea:focus {
     flex-direction: column;
     margin-top: 140px;
   }
-}
 
-@media (min-width: 990px) {
   .work-section {
     display: flex;
     flex-direction: column;
@@ -635,6 +630,7 @@ textarea:focus {
   .placeholder {
     height: 448px;
     width: 684px;
+    color: #091e42;
   }
 
   .mini-title {
@@ -673,18 +669,32 @@ textarea:focus {
     color: rgba(255, 255, 255, 1);
     padding: 8px;
   }
-}
 
-@media (min-width: 990px) {
+  .art-container {
+    height: 435px;
+  }
+
+  .professional-art .art-container:hover {
+    transform: scale(1.05);
+    transition: all 0.6s ease-in-out;
+    cursor: pointer;
+  }
+
   .professional-art {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
   }
 
-  .art-container.one,
-  .art-container.four {
+  .art-container.one {
     background-image: url(icons/ImgPlaceholder1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .art-container.four {
+    background-image: url(icons/ImgPlaceholder4.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -701,10 +711,6 @@ textarea:focus {
     background-image: url(icons/imageplaceholder303.png);
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  .art-container.one {
-    position: relative;
   }
 
   .art-container > .invite {
@@ -741,21 +747,32 @@ textarea:focus {
     font-size: 15px;
   }
 
-  .art-container {
-    height: 435px;
-  }
-
   .art-container.one .invite {
     display: block;
   }
-}
 
-@media (min-width: 990px) {
   .about-me {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 100px;
+    background-image: url(icons/illustration-about-me.png);
+    background-repeat: no-repeat;
+    background-size: 41% 27%;
+    background-position: 100% 18%;
+  }
+
+  .bottom-line {
+    margin-top: 50px;
+    border-bottom: 1.5px solid #dfe1e6;
+    margin-left: 83px;
+  }
+
+  .contact-form {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: #ffff;
   }
 
   .myresume {
@@ -763,13 +780,6 @@ textarea:focus {
     flex-direction: column;
     align-items: flex-start;
     width: 50%;
-  }
-
-  .the-resume {
-    background-image: url(icons/illustration-about-me.png);
-    background-repeat: no-repeat;
-    background-position-x: 530px;
-    background-position-y: 0.47px;
   }
 
   .h3-title {
@@ -815,35 +825,39 @@ textarea:focus {
     font-weight: 400;
     font-size: 22px;
   }
-}
-
-@media (min-width: 990px) {
-  .contact-form {
-    padding: 0;
-  }
 
   .the-contact {
-    display: flex !important;
-    flex-direction: row !important;
+    display: flex;
+    flex-direction: row;
     text-align: start;
-    align-items: baseline;
-    justify-content: space-around;
+    padding: 130px 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: 48px;
+    gap: 24px;
   }
 
   form {
-    width: 50%;
+    width: 684px;
   }
 
-  .contact-p {
-    font-family: "Inter", sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 40px !important;
-    width: 40%;
+  .contact-p:hover {
+    transform: rotate(15deg) translateX(5px);
+    cursor: pointer;
   }
 
   textarea {
+    width: 90%;
+    padding: 12px;
+    height: 114px;
+    background: #fbf8f7;
+    border: none;
+    font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    color: #3c3a39;
   }
 
   .input__sec {
@@ -857,33 +871,72 @@ textarea:focus {
     padding: 0;
     margin-bottom: 17px;
   }
+}
 
-  .last-contact {
-    align-self: center;
-    justify-content: center;
-    margin-bottom: 25px;
-  }
+.the-contact > .contact-p {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  margin-bottom: 73px;
+  line-height: 44px;
+  width: 340px;
+  color: #172b4d;
+}
 
-  .footer-contacts {
-    gap: 35px;
-    font-weight: 500;
+.animate-logo {
+  animation-duration: 1s;
+  animation-name: animate-logo;
+}
+
+@keyframes animate-logo {
+  0% {
+    transform: rotate(360deg);
   }
 }
 
 @media (max-width: 990px) {
+  .desk-head {
+    display: none;
+  }
+
+  .work-on {
+    align-self: center;
+  }
+
   .hr1 {
     margin: 0;
     margin-top: 40px;
     align-self: stretch;
   }
 
+  hr {
+    margin-bottom: 21px;
+  }
+
+  .about-me {
+    background-image: url(icons/illustration-about-me-mobile.png);
+    background-repeat: no-repeat;
+    background-position: right top 26%;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-form > .the-contact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
   .last-contact {
     align-self: center;
     justify-content: center;
-    margin-bottom: 15px;
-  }
-
-  hr {
-    margin-bottom: 20px;
+    margin-bottom: -135px;
   }
 }
