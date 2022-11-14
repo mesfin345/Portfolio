@@ -10,6 +10,7 @@ const about = document.querySelector(".about-me");
 const contactLink = document.querySelector("#contact");
 const contact = document.querySelector(".last-contact");
 
+
 function closeBtn() {
   nav.classList.remove("desk-li-menu");
   nav.style.display = "none";
@@ -26,9 +27,18 @@ function openAbout() {
 function openContact() {
   contact.scrollIntoView();
 }
+
 function navList() {
   nav.classList.add("desk-li-menu");
   nav.style.display = "block";
+}
+
+function openDeskDialog() {
+  deskDialog.style.display = "block";
+}
+
+function closeDeskDialog() {
+  deskDialog.style.display = "none";
 }
 
 list.forEach((element) => {
@@ -40,3 +50,6 @@ closeButton.addEventListener("click", closeBtn);
 portfolioLink.addEventListener("click", openPortfolio);
 aboutLink.addEventListener("click", openAbout);
 contactLink.addEventListener("click", openContact);
+
+seeProjectOne.addEventListener("click", openDeskDialog);
+closeDeskDialogBtn.addEventListener("click", closeDeskDialog);
