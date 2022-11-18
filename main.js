@@ -133,6 +133,32 @@ if (localStorageData) {
     (fullName.value = localStorageData.fullName);
 }
 
+const formData = {
+  email: email.value,
+  fullName: fullName.value,
+  textArea: textArea.value,
+};
+
+localStorage.setItem("formData", JSON.stringify(formData));
+const retrievedString = localStorage.getItem("formData");
+const parsedObject = JSON.parse(retrievedString);
+
+email.addEventListener("change", (event) => {
+  parsedObject.email = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+fullName.addEventListener("change", (event) => {
+  parsedObject.fullName = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+textArea.addEventListener("change", (event) => {
+  parsedObject.textArea = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+
 //
 function closeBtn() {
   nav.classList.remove("desk-li-menu");
@@ -179,12 +205,6 @@ function submitBtnFunction() {
 
   submitBtn.type = "button";
 
-  const formData = {
-    email: email.value,
-    fullName: fullName.value,
-    textArea: textArea.value,
-  };
-
   if (!isLowerCase) {
     const errorParagraph = document.createElement("span");
     const errorNode = document.createTextNode(
@@ -195,7 +215,6 @@ function submitBtnFunction() {
 
     error.appendChild(errorParagraph);
   } else {
-    localStorage.setItem("formData", JSON.stringify(formData));
     submitBtn.type = "submit";
     submitForm.action = "https://formspree.io/f/xnqwjqwy";
     submitForm.method = "post";
