@@ -321,19 +321,20 @@
                 />
               </label>
             </div>
-              <label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  required
-                />
-              </label>
-              <div id="error"></div>
+            <label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+            </label>
+            <div id="error"></div>
             <label>
               <textarea
                 name="textarea"
+                id="textarea"
                 required
                 minlength="2"
                 maxlength="500"
@@ -349,7 +350,13 @@
               >
                 Get in touch
               </button>
-            </div>
+              <button
+              onclick="resetFunction()"
+              type="button"
+              name="reset"
+            >
+              Reset
+            </button>
           </div>
         </form>
       </div>

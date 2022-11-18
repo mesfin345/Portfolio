@@ -18,6 +18,11 @@ const professionalArtDiv = document.querySelector(".professional-art");
 const error = document.getElementById("error");
 const submitForm = document.getElementById("form");
 const submitBtn = document.getElementById("btn__submit");
+
+// form data
+const email = document.getElementById("email");
+const fullName = document.getElementById("full-name");
+const textArea = document.getElementById("textarea");
 // projects data
 
 const projects = [
@@ -119,6 +124,16 @@ projects.map((project) => {
   professionalArtDiv.appendChild(artContainerDiv);
 });
 
+// populating form value from localStorage
+
+const localStorageData = JSON.parse(localStorage.getItem("formData"));
+if (localStorageData) {
+  (email.value = localStorageData.email),
+    (textArea.value = localStorageData.textArea),
+    (fullName.value = localStorageData.fullName);
+}
+
+//
 function closeBtn() {
   nav.classList.remove("desk-li-menu");
   nav.style.display = "none";
@@ -151,7 +166,7 @@ function closePopUp() {
 }
 
 function submitBtnFunction() {
-  let emailValue = document.getElementById("email").value;
+  let emailValue = email.value;
   let splittedEmail = emailValue.split("@")[0];
   let isLowerCase = true;
 
@@ -173,10 +188,23 @@ function submitBtnFunction() {
 
     error.appendChild(errorParagraph);
   } else {
+    localStorage.setItem(
+      "formData",
+      JSON.stringify({
+        email: email.value,
+        fullName: fullName.value,
+        textArea: textArea.value,
+      })
+    );
     submitBtn.type = "submit";
     submitForm.action = "https://formspree.io/f/xnqwjqwy";
     submitForm.method = "post";
   }
+}
+
+function resetFunction() {
+  localStorage.removeItem("formData");
+  (email.value = ""), (textArea.value = ""), (fullName.value = "");
 }
 
 list.forEach((element) => {
