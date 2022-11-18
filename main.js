@@ -179,6 +179,12 @@ function submitBtnFunction() {
 
   submitBtn.type = "button";
 
+  const formData = {
+    email: email.value,
+    fullName: fullName.value,
+    textArea: textArea.value,
+  };
+
   if (!isLowerCase) {
     const errorParagraph = document.createElement("span");
     const errorNode = document.createTextNode(
@@ -189,14 +195,7 @@ function submitBtnFunction() {
 
     error.appendChild(errorParagraph);
   } else {
-    localStorage.setItem(
-      "formData",
-      JSON.stringify({
-        email: email.value,
-        fullName: fullName.value,
-        textArea: textArea.value,
-      })
-    );
+    localStorage.setItem("formData", JSON.stringify(formData));
     submitBtn.type = "submit";
     submitForm.action = "https://formspree.io/f/xnqwjqwy";
     submitForm.method = "post";
