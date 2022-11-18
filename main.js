@@ -166,7 +166,6 @@ function closePopUp() {
   portfolio.style.filter = "none";
 }
 
-
 function submitBtnFunction() {
   let emailValue = email.value;
   let splittedEmail = emailValue.split("@")[0];
@@ -207,6 +206,7 @@ function submitBtnFunction() {
 function resetFunction() {
   localStorage.removeItem("formData");
   (email.value = ""), (textArea.value = ""), (fullName.value = "");
+}
 
 function openDeskDialog() {
   deskDialog.style.display = "block";
@@ -214,7 +214,6 @@ function openDeskDialog() {
 
 function closeDeskDialog() {
   deskDialog.style.display = "none";
-
 }
 
 list.forEach((element) => {
@@ -228,6 +227,3 @@ aboutLink.addEventListener("click", openAbout);
 contactLink.addEventListener("click", openContact);
 seeProjectsButton.addEventListener("click", inviteButton);
 closeButton2.addEventListener("click", closePopUp);
-
-seeProjectOne.addEventListener("click", openDeskDialog);
-closeDeskDialogBtn.addEventListener("click", closeDeskDialog);
