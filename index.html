@@ -306,7 +306,7 @@
           I'm always interested in hearing about new projects, so if you'd like
           to chat please get in touch.
         </p>
-        <form action="https://formspree.io/f/xnqwjqwy" method="post">
+        <form id="form">
           <div class="input__sec">
             <div class="name">
               <label>
@@ -321,19 +321,20 @@
                 />
               </label>
             </div>
-            <p>
-              <label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  required
-                />
-              </label>
-            </p>
+            <label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+            </label>
+            <div id="error"></div>
             <label>
               <textarea
                 name="textarea"
+                id="textarea"
                 required
                 minlength="2"
                 maxlength="500"
@@ -341,46 +342,58 @@
               ></textarea>
             </label>
             <div class="btn__container">
-              <button type="submit" name="submit" class="btn__submit">
+              <button
+                onclick="submitBtnFunction()"
+                type="button"
+                name="submit"
+                id="btn__submit"
+              >
                 Get in touch
               </button>
-            </div>
+              <button
+              onclick="resetFunction()"
+              type="button"
+              name="reset"
+            >
+              Reset
+            </button>
           </div>
         </form>
       </div>
-      <div class="hr1">
-        <hr class="hr" />
-      </div>
-      <div class="last-contact">
-        <ul class="footer-contacts">
-          <li>
-            <a href="https://github.com/mesfin345"
-              ><img src="icons/github.png" alt="github address"
-            /></a>
-          </li>
-          <li>
-            <a href="https://angel.co"
-              ><img src="icons/angelist.png" alt="angelist address"
-            /></a>
-          </li>
-          <li>
-            <a href="https://medium.com"
-              ><img src="icons/medium.png" alt="medium address"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com">
-              <img src="icons/linkedin.png" alt="linkedin address" />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com">
-              <img src="icons/twitter.png" alt="twitter address"
-            /></a>
-          </li>
-        </ul>
-      </div>
+      
     </section>
+    <div class="hr1">
+      <hr class="hr" />
+    </div>
+    <div class="last-contact">
+      <ul class="footer-contacts">
+        <li>
+          <a href="https://github.com/mesfin345"
+            ><img src="icons/github.png" alt="github address"
+          /></a>
+        </li>
+        <li>
+          <a href="https://angel.co"
+            ><img src="icons/angelist.png" alt="angelist address"
+          /></a>
+        </li>
+        <li>
+          <a href="https://medium.com"
+            ><img src="icons/medium.png" alt="medium address"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com">
+            <img src="icons/linkedin.png" alt="linkedin address" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com">
+            <img src="icons/twitter.png" alt="twitter address"
+          /></a>
+        </li>
+      </ul>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

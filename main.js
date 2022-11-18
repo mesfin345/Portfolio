@@ -15,6 +15,14 @@ const popUp = document.querySelector(".desk-popup");
 const closeButton2 = document.querySelector(".close-popup");
 const professionalArtDiv = document.querySelector(".professional-art");
 
+const error = document.getElementById("error");
+const submitForm = document.getElementById("form");
+const submitBtn = document.getElementById("btn__submit");
+
+// form data
+const email = document.getElementById("email");
+const fullName = document.getElementById("full-name");
+const textArea = document.getElementById("textarea");
 // projects data
 
 const projects = [
@@ -116,6 +124,42 @@ projects.map((project) => {
   professionalArtDiv.appendChild(artContainerDiv);
 });
 
+// populating form value from localStorage
+
+const localStorageData = JSON.parse(localStorage.getItem("formData"));
+if (localStorageData) {
+  (email.value = localStorageData.email),
+    (textArea.value = localStorageData.textArea),
+    (fullName.value = localStorageData.fullName);
+}
+
+const formData = {
+  email: email.value,
+  fullName: fullName.value,
+  textArea: textArea.value,
+};
+
+localStorage.setItem("formData", JSON.stringify(formData));
+const retrievedString = localStorage.getItem("formData");
+const parsedObject = JSON.parse(retrievedString);
+
+email.addEventListener("change", (event) => {
+  parsedObject.email = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+fullName.addEventListener("change", (event) => {
+  parsedObject.fullName = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+textArea.addEventListener("change", (event) => {
+  parsedObject.textArea = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+
+//
 function closeBtn() {
   nav.classList.remove("desk-li-menu");
   nav.style.display = "none";
@@ -148,6 +192,40 @@ function closePopUp() {
   portfolio.style.filter = "none";
 }
 
+function submitBtnFunction() {
+  let emailValue = email.value;
+  let splittedEmail = emailValue.split("@")[0];
+  let isLowerCase = true;
+
+  for (let char of splittedEmail) {
+    if (char === char.toUpperCase()) {
+      isLowerCase = false;
+    }
+  }
+
+  submitBtn.type = "button";
+
+  if (!isLowerCase) {
+    const errorParagraph = document.createElement("span");
+    const errorNode = document.createTextNode(
+      "All the email should be in Lower Case!!"
+    );
+
+    errorParagraph.appendChild(errorNode);
+
+    error.appendChild(errorParagraph);
+  } else {
+    submitBtn.type = "submit";
+    submitForm.action = "https://formspree.io/f/xnqwjqwy";
+    submitForm.method = "post";
+  }
+}
+
+function resetFunction() {
+  localStorage.removeItem("formData");
+  (email.value = ""), (textArea.value = ""), (fullName.value = "");
+}
+
 function openDeskDialog() {
   deskDialog.style.display = "block";
 }
@@ -167,6 +245,3 @@ aboutLink.addEventListener("click", openAbout);
 contactLink.addEventListener("click", openContact);
 seeProjectsButton.addEventListener("click", inviteButton);
 closeButton2.addEventListener("click", closePopUp);
-
-seeProjectOne.addEventListener("click", openDeskDialog);
-closeDeskDialogBtn.addEventListener("click", closeDeskDialog);
