@@ -10,6 +10,111 @@ const about = document.querySelector(".about-me");
 const contactLink = document.querySelector("#contact");
 const contact = document.querySelector(".last-contact");
 
+const seeProjectsButton = document.querySelector(".invite-one");
+const popUp = document.querySelector(".desk-popup");
+const closeButton2 = document.querySelector(".close-popup");
+const professionalArtDiv = document.querySelector(".professional-art");
+
+// projects data
+
+const projects = [
+  {
+    id: "one",
+    name: "Data Dashboard Healthcare",
+    description:
+      "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    image: "icons/ImgPlaceholder6.png",
+    technologies: ["html", "bootstrap", "Ruby"],
+    liveLink: "www.google.com",
+    sourceLink: "www.facebook.com",
+    invite: "See Project",
+  },
+
+  {
+    id: "two",
+    name: "Data Dashboard Healthcare",
+    description:
+      "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    image: "icons/ImgPlaceholder6.png",
+    technologies: ["html", "bootstrap", "Ruby"],
+    liveLink: "www.google.com",
+    sourceLink: "www.facebook.com",
+    invite: "See Project",
+  },
+
+  {
+    id: "three",
+    name: "Website Portfolio",
+    description:
+      "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    image: "icons/ImgPlaceholder6.png",
+    technologies: ["html", "bootstrap", "Ruby"],
+    liveLink: "www.google.com",
+    sourceLink: "www.facebook.com",
+    invite: "See Project",
+  },
+
+  {
+    id: "four",
+    name: "Website Portfolio",
+    description:
+      "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    image: "icons/ImgPlaceholder6.png",
+    technologies: ["html", "bootstrap", "Ruby"],
+    liveLink: "www.google.com",
+    sourceLink: "www.facebook.com",
+    invite: "See Project",
+  },
+];
+
+projects.map((project) => {
+  const artContainerDiv = document.createElement("div");
+  artContainerDiv.classList.add("art-container");
+  artContainerDiv.classList.add(project.id);
+  const artItemDiv = document.createElement("div");
+  artItemDiv.classList.add("art-item");
+  const h2Data = document.createElement("h2");
+  h2Data.classList.add("data");
+  const h2Node = document.createTextNode(project.name);
+  const pSelection = document.createElement("p");
+  pSelection.classList.add("selections");
+  const pNode = document.createTextNode(project.description);
+  const ulValue = document.createElement("ul");
+  ulValue.classList.add("buttons");
+  const li1 = document.createElement("li");
+  const li1Node = document.createTextNode(project.technologies[0]);
+  const li2 = document.createElement("li");
+  const li2Node = document.createTextNode(project.technologies[1]);
+  const li3 = document.createElement("li");
+  const li3Node = document.createTextNode(project.technologies[2]);
+  const button = document.createElement("button");
+  button.classList.add("invite");
+  const buttonEvent = () => {
+    popUp.style.display = "block";
+  };
+  button.addEventListener("click", buttonEvent);
+  const buttonNode = document.createTextNode(project.invite);
+
+  artContainerDiv.appendChild(artItemDiv);
+  h2Data.appendChild(h2Node);
+  pSelection.appendChild(pNode);
+  li1.appendChild(li1Node);
+  li2.appendChild(li2Node);
+  li3.appendChild(li3Node);
+  ulValue.appendChild(li1);
+  ulValue.appendChild(li2);
+  ulValue.appendChild(li3);
+  artItemDiv.appendChild(h2Data);
+  artItemDiv.appendChild(pSelection);
+  artItemDiv.appendChild(ulValue);
+  button.appendChild(buttonNode);
+
+  artContainerDiv.appendChild(artItemDiv);
+
+  artContainerDiv.appendChild(button);
+
+  professionalArtDiv.appendChild(artContainerDiv);
+});
 
 function closeBtn() {
   nav.classList.remove("desk-li-menu");
@@ -33,6 +138,16 @@ function navList() {
   nav.style.display = "block";
 }
 
+function inviteButton() {
+  popUp.style.display = "block";
+  portfolio.style.filter = "blur(5px)";
+}
+
+function closePopUp() {
+  popUp.style.display = "none";
+  portfolio.style.filter = "none";
+}
+
 function openDeskDialog() {
   deskDialog.style.display = "block";
 }
@@ -50,6 +165,8 @@ closeButton.addEventListener("click", closeBtn);
 portfolioLink.addEventListener("click", openPortfolio);
 aboutLink.addEventListener("click", openAbout);
 contactLink.addEventListener("click", openContact);
+seeProjectsButton.addEventListener("click", inviteButton);
+closeButton2.addEventListener("click", closePopUp);
 
 seeProjectOne.addEventListener("click", openDeskDialog);
 closeDeskDialogBtn.addEventListener("click", closeDeskDialog);
