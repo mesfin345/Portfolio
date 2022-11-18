@@ -19,10 +19,13 @@ const error = document.getElementById("error");
 const submitForm = document.getElementById("form");
 const submitBtn = document.getElementById("btn__submit");
 
+
+
 // form data
 const email = document.getElementById("email");
 const fullName = document.getElementById("full-name");
 const textArea = document.getElementById("textarea");
+ 
 // projects data
 
 const projects = [
@@ -193,7 +196,11 @@ function closePopUp() {
 }
 
 function submitBtnFunction() {
+
+  let emailValue = document.getElementById("email").value;
+=======
   let emailValue = email.value;
+
   let splittedEmail = emailValue.split("@")[0];
   let isLowerCase = true;
 
@@ -221,10 +228,13 @@ function submitBtnFunction() {
   }
 }
 
+
+
 function resetFunction() {
   localStorage.removeItem("formData");
   (email.value = ""), (textArea.value = ""), (fullName.value = "");
 }
+
 
 function openDeskDialog() {
   deskDialog.style.display = "block";
