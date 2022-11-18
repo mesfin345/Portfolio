@@ -146,6 +146,8 @@ function inviteButton() {
 function closePopUp() {
   popUp.style.display = "none";
   portfolio.style.filter = "none";
+}
+
 function openDeskDialog() {
   deskDialog.style.display = "block";
 }
