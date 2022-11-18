@@ -132,6 +132,7 @@ function openAbout() {
 function openContact() {
   contact.scrollIntoView();
 }
+
 function navList() {
   nav.classList.add("desk-li-menu");
   nav.style.display = "block";
@@ -145,6 +146,12 @@ function inviteButton() {
 function closePopUp() {
   popUp.style.display = "none";
   portfolio.style.filter = "none";
+function openDeskDialog() {
+  deskDialog.style.display = "block";
+}
+
+function closeDeskDialog() {
+  deskDialog.style.display = "none";
 }
 
 list.forEach((element) => {
@@ -158,3 +165,6 @@ aboutLink.addEventListener("click", openAbout);
 contactLink.addEventListener("click", openContact);
 seeProjectsButton.addEventListener("click", inviteButton);
 closeButton2.addEventListener("click", closePopUp);
+
+seeProjectOne.addEventListener("click", openDeskDialog);
+closeDeskDialogBtn.addEventListener("click", closeDeskDialog);
