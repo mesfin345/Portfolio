@@ -306,7 +306,7 @@
           I'm always interested in hearing about new projects, so if you'd like
           to chat please get in touch.
         </p>
-        <form action="https://formspree.io/f/xnqwjqwy" method="post">
+        <form id="form">
           <div class="input__sec">
             <div class="name">
               <label>
@@ -321,16 +321,16 @@
                 />
               </label>
             </div>
-            <p>
               <label>
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   placeholder="Email address"
                   required
                 />
               </label>
-            </p>
+              <div id="error"></div>
             <label>
               <textarea
                 name="textarea"
@@ -341,7 +341,12 @@
               ></textarea>
             </label>
             <div class="btn__container">
-              <button type="submit" name="submit" class="btn__submit">
+              <button
+                onclick="submitBtnFunction()"
+                type="button"
+                name="submit"
+                id="btn__submit"
+              >
                 Get in touch
               </button>
             </div>

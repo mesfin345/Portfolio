@@ -15,6 +15,9 @@ const popUp = document.querySelector(".desk-popup");
 const closeButton2 = document.querySelector(".close-popup");
 const professionalArtDiv = document.querySelector(".professional-art");
 
+const error = document.getElementById("error");
+const submitForm = document.getElementById("form");
+const submitBtn = document.getElementById("btn__submit");
 // projects data
 
 const projects = [
@@ -145,6 +148,35 @@ function inviteButton() {
 function closePopUp() {
   popUp.style.display = "none";
   portfolio.style.filter = "none";
+}
+
+function submitBtnFunction() {
+  let emailValue = document.getElementById("email").value;
+  let splittedEmail = emailValue.split("@")[0];
+  let isLowerCase = true;
+
+  for (let char of splittedEmail) {
+    if (char === char.toUpperCase()) {
+      isLowerCase = false;
+    }
+  }
+
+  submitBtn.type = "button";
+
+  if (!isLowerCase) {
+    const errorParagraph = document.createElement("span");
+    const errorNode = document.createTextNode(
+      "All the email should be in Lower Case!!"
+    );
+
+    errorParagraph.appendChild(errorNode);
+
+    error.appendChild(errorParagraph);
+  } else {
+    submitBtn.type = "submit";
+    submitForm.action = "https://formspree.io/f/xnqwjqwy";
+    submitForm.method = "post";
+  }
 }
 
 list.forEach((element) => {
