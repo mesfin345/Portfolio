@@ -18,6 +18,14 @@ const professionalArtDiv = document.querySelector(".professional-art");
 const error = document.getElementById("error");
 const submitForm = document.getElementById("form");
 const submitBtn = document.getElementById("btn__submit");
+
+
+
+// form data
+const email = document.getElementById("email");
+const fullName = document.getElementById("full-name");
+const textArea = document.getElementById("textarea");
+ 
 // projects data
 
 const projects = [
@@ -119,6 +127,42 @@ projects.map((project) => {
   professionalArtDiv.appendChild(artContainerDiv);
 });
 
+// populating form value from localStorage
+
+const localStorageData = JSON.parse(localStorage.getItem("formData"));
+if (localStorageData) {
+  (email.value = localStorageData.email),
+    (textArea.value = localStorageData.textArea),
+    (fullName.value = localStorageData.fullName);
+}
+
+const formData = {
+  email: email.value,
+  fullName: fullName.value,
+  textArea: textArea.value,
+};
+
+localStorage.setItem("formData", JSON.stringify(formData));
+const retrievedString = localStorage.getItem("formData");
+const parsedObject = JSON.parse(retrievedString);
+
+email.addEventListener("change", (event) => {
+  parsedObject.email = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+fullName.addEventListener("change", (event) => {
+  parsedObject.fullName = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+textArea.addEventListener("change", (event) => {
+  parsedObject.textArea = event.target.value;
+  const modifiedString = JSON.stringify(parsedObject);
+  localStorage.setItem("formData", modifiedString);
+});
+
+//
 function closeBtn() {
   nav.classList.remove("desk-li-menu");
   nav.style.display = "none";
@@ -152,7 +196,11 @@ function closePopUp() {
 }
 
 function submitBtnFunction() {
+
   let emailValue = document.getElementById("email").value;
+=======
+  let emailValue = email.value;
+
   let splittedEmail = emailValue.split("@")[0];
   let isLowerCase = true;
 
@@ -179,6 +227,14 @@ function submitBtnFunction() {
     submitForm.method = "post";
   }
 }
+
+
+
+function resetFunction() {
+  localStorage.removeItem("formData");
+  (email.value = ""), (textArea.value = ""), (fullName.value = "");
+}
+
 
 function openDeskDialog() {
   deskDialog.style.display = "block";

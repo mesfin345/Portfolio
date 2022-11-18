@@ -321,6 +321,7 @@
                 />
               </label>
             </div>
+
               <label>
                 <input
                   id="email"
@@ -331,9 +332,22 @@
                 />
               </label>
               <div id="error"></div>
+
+            <label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required
+              />
+            </label>
+            <div id="error"></div>
+ 
             <label>
               <textarea
                 name="textarea"
+                id="textarea"
                 required
                 minlength="2"
                 maxlength="500"
@@ -349,43 +363,50 @@
               >
                 Get in touch
               </button>
-            </div>
+              <button
+              onclick="resetFunction()"
+              type="button"
+              name="reset"
+            >
+              Reset
+            </button>
           </div>
         </form>
       </div>
-      <div class="hr1">
-        <hr class="hr" />
-      </div>
-      <div class="last-contact">
-        <ul class="footer-contacts">
-          <li>
-            <a href="https://github.com/mesfin345"
-              ><img src="icons/github.png" alt="github address"
-            /></a>
-          </li>
-          <li>
-            <a href="https://angel.co"
-              ><img src="icons/angelist.png" alt="angelist address"
-            /></a>
-          </li>
-          <li>
-            <a href="https://medium.com"
-              ><img src="icons/medium.png" alt="medium address"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com">
-              <img src="icons/linkedin.png" alt="linkedin address" />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com">
-              <img src="icons/twitter.png" alt="twitter address"
-            /></a>
-          </li>
-        </ul>
-      </div>
+      
     </section>
+    <div class="hr1">
+      <hr class="hr" />
+    </div>
+    <div class="last-contact">
+      <ul class="footer-contacts">
+        <li>
+          <a href="https://github.com/mesfin345"
+            ><img src="icons/github.png" alt="github address"
+          /></a>
+        </li>
+        <li>
+          <a href="https://angel.co"
+            ><img src="icons/angelist.png" alt="angelist address"
+          /></a>
+        </li>
+        <li>
+          <a href="https://medium.com"
+            ><img src="icons/medium.png" alt="medium address"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com">
+            <img src="icons/linkedin.png" alt="linkedin address" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com">
+            <img src="icons/twitter.png" alt="twitter address"
+          /></a>
+        </li>
+      </ul>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
